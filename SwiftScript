@@ -1,0 +1,10 @@
+from cryptography.fernet import Fernet
+
+key = Fernet.generate_key()
+cipher_suite = Fernet(key)
+
+data = b"Sensitive data to be encrypted"
+cipher_text = cipher_suite.encrypt(data)
+
+decrypted_data = cipher_suite.decrypt(cipher_text)
+print(decrypted_data.decode())
