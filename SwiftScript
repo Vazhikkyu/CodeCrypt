@@ -1,4 +1,4 @@
-from cryptography.fernet import Fernet #
+from cryptography.fernet import Fernet #1
 
 key = Fernet.generate_key()
 cipher_suite = Fernet(key)
